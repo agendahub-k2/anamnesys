@@ -1,22 +1,21 @@
-// src/App.tsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// import Login from './pages/Login';
+import Home from './components/Home';
 import Navbar from './components/Navbar';
-import './App.css'; // Se você tiver um CSS global
+import GlobalStyle from './GlobalStyles';
+import Register from './pages/Register';
 
-const App: React.FC = () => {
+function App() {
   return (
-    <Router>
+    <Router> 
+      <GlobalStyle />
       <Navbar />
-      <div style={{ marginTop: '64px' }}> {/* Ajuste a margem conforme necessário */}
-        <Routes>
-          {/* <Route path="/" element={<Login />} /> */}
-          {/* Outras rotas podem ser adicionadas aqui */}
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Register" element={<Register />} />
+      </Routes>
     </Router>
   );
-};
+}
 
 export default App;
