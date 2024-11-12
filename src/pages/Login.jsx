@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom"
 import { motion } from 'framer-motion'
 
-import { Size, SizeBox, CButton, Background } from "../styles/LoginAndRegister/styles"
-import { Button1 } from "../components/Button1/Button1"
-import { Input } from "../components/Input/Input"
-import { IconButton } from "../components/IconButton/IconButton"
-import { CheckBox } from "../components/CheckBox/CheckBox"
+import { Size, SizeBox, CButton, Background } from "../../styles/LoginAndRegister/styles"
+import { Button1 } from "../Button1/Button1"
+import { Input } from "../Input/Input"
+import { IconButton } from "../IconButton/IconButton"
+import { CheckBox } from "../CheckBox/CheckBox"
 
 //Images
 import logo1 from "../assets/img/logo/logo_1.png"

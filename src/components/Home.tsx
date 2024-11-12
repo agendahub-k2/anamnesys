@@ -1,29 +1,65 @@
 import React from 'react';
-import styled from 'styled-components';
-import BgImg from '../Assets/Fundo-bg.png';
+import styled, { createGlobalStyle } from 'styled-components';
+import BgImg from '../Assets/background_login.png';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+`;
+
 const Section = styled.section`
   background-image: url(${BgImg});
-  height: 785px;
-  display: block;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  height: 100vh; 
+  display: flex;
+  align-items: center;  
+  justify-content: center; 
+
+  @media (max-width: 1024px) {
+    background-size: cover;
+    height: 100vh;  
+  }
 
   @media (max-width: 768px) {
-    height: auto;
-    background-size: contain;
+    background-size: cover;
+    padding: 40px 20px;
+  }
+
+  @media (max-width: 480px) {
+    background-size: cover; 
+    padding: 30px 15px;
   }
 `;
 
 const Content = styled.div`
   width: 100%;
-  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;  
 
   @media (max-width: 768px) {
-    height: auto;
     padding: 20px;
+    justify-content: center;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
   }
 `;
 
@@ -31,9 +67,19 @@ const Left = styled.div`
   padding-left: 220px;
   padding-top: 143px;
 
+  @media (max-width: 1024px) {
+    padding-left: 20px;
+    padding-top: 100px;
+  }
+
   @media (max-width: 768px) {
     padding-left: 20px;
     padding-top: 60px;
+  }
+
+  @media (max-width: 480px) {
+    padding-left: 10px;
+    padding-top: 30px;
   }
 `;
 
@@ -53,6 +99,8 @@ const Title = styled.p`
 
   @media (max-width: 480px) {
     font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
   }
 `;
 
@@ -77,10 +125,11 @@ const Desc = styled.p`
   @media (max-width: 480px) {
     font-size: 14px;
     line-height: 24px;
+    margin-top: 15px;
   }
 `;
 
-const StyledButton = styled(Link)`  
+const StyledButton = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,25 +167,27 @@ const StyledButton = styled(Link)`
 
 const Home = () => {
   return (
-    <Section>
-      <Content>
-        <Left>
-          <Title>
-            Otimize seu atendimento com <br /> nossas fichas de Anamnesys <br /> personalizadas!
-          </Title>
-          <Desc>
-            Simplifique o processo de coleta e organização de informações essenciais com nossas fichas de anamnesys inteligentes e intuitivas! Seja para saúde, educação, negócios ou outros setores, ofereça uma experiência prática, organizada e personalizada para seus clientes e pacientes.
-          </Desc>
-          
-          <StyledButton to="/Register">
-            <span>Clique aqui e realize seu cadastro</span>
-            <MdKeyboardArrowRight size={24} />
-          </StyledButton>
-        </Left>
-      </Content>
-    </Section>
+    <>
+      <GlobalStyle /> 
+      <Section>
+        <Content>
+          <Left>
+            <Title>
+              Otimize seus atendimento com <br /> nossas fichas de Anamnesys <br /> personalizadas!
+            </Title>
+            <Desc>
+              Simplifique o processo de coleta e organização de informações essenciais com nossas fichas de anamnesys inteligentes e intuitivas! Seja para saúde, educação, negócios ou outros setores, ofereça uma experiência prática, organizada e personalizada para seus clientes e pacientes.
+            </Desc>
+
+            <StyledButton to="/Register">
+              <span>Clique aqui e realize seu cadastro</span>
+              <MdKeyboardArrowRight size={24} />
+            </StyledButton>
+          </Left>
+        </Content>
+      </Section>
+    </>
   );
 };
 
 export default Home;
-
