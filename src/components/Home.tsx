@@ -80,7 +80,7 @@ const Desc = styled.p`
   }
 `;
 
-const StyledButton = styled(Link)`  // Alterando de 'a' para 'Link' do react-router-dom
+const StyledButton = styled(Link)`  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,13 +122,13 @@ const Home = () => {
       <Content>
         <Left>
           <Title>
-            Otimize seu Atendimento com <br /> Nossas Fichas de Anamnesys <br /> Personalizadas!
+            Otimize seu atendimento com <br /> nossas fichas de Anamnesys <br /> personalizadas!
           </Title>
           <Desc>
             Simplifique o processo de coleta e organização de informações essenciais com nossas fichas de anamnesys inteligentes e intuitivas! Seja para saúde, educação, negócios ou outros setores, ofereça uma experiência prática, organizada e personalizada para seus clientes e pacientes.
           </Desc>
-          {/* Altere o href para to e remova o target="_blank" */}
-          <StyledButton to="/Register"> {/* Redireciona para /register */}
+          
+          <StyledButton to="/Register">
             <span>Clique aqui e realize seu cadastro</span>
             <MdKeyboardArrowRight size={24} />
           </StyledButton>
@@ -139,3 +139,4 @@ const Home = () => {
 };
 
 export default Home;
+

@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import Img from '../Assets/logo.png';
+import LogoImg from '../Assets/logo.png';
+
 
 const NavbarContainer = styled.div`
   width: 100%;
@@ -116,16 +117,18 @@ const Navbar = () => {
   return (
     <NavbarContainer>
       <NavbarWrap>
-        <Logo>
-          <img src={Img} alt="Logo" />
-        </Logo>
+        <Link to='/'>
+          <Logo>
+            <img src={LogoImg} alt="Logo" />
+          </Logo>
+        </Link>
+        
         <Nav>
-          <NavLink to='/'>HOME</NavLink>
-          <NavLink to='/'>GUIA</NavLink>
-          <NavLink to='/'>PREÇOS</NavLink>
-          <NavLink to='/'>SOBRE</NavLink>
-          <NavLink to='/'>MODELOS</NavLink>
-          <NavLink to='/'>AJUDA</NavLink>
+          <NavLink to='/guias'>GUIA</NavLink>
+          <NavLink to='/precos'>PREÇOS</NavLink>
+          <NavLink to='/sobre'>SOBRE</NavLink>
+          <NavLink to='/modelos'>MODELOS</NavLink>
+          <NavLink to='/ajuda'>AJUDA</NavLink>
         </Nav>
         <ButtonContainer>
           <Button primary>SIGN UP</Button>
