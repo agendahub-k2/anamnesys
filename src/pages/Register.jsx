@@ -6,7 +6,7 @@ import { Input2 } from "../components/Input2/Input2";
 import { Button1 } from "../components/Button1/Button1";
 
 // Imagens e ícones
-import logo1 from "../Assets/img/logo/logo_1.png"; 
+import logo1 from "../Assets/logo.png"; 
 import iconBack from "../Assets/img/icons/filled/back_filled.png";
 import faceIcon from "../Assets/img/icons/outline/face_id.png";
 import phoneIcon from "../Assets/img/icons/outline/phone.png";

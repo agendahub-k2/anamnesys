@@ -42,9 +42,7 @@ const Navbar = () => {
         </HamburgerIcon>
 
         <Nav isMenuOpen={isMenuOpen}>
-          <NavLink to='/guias'>GUIA</NavLink>
-          <NavLink to='/precos'>PREÇOS</NavLink>
-          <NavLink to='/sobre'>SOBRE</NavLink>
+          <NavLink to='/precos'>PLANOS</NavLink>
           <NavLink to='/modelos'>MODELOS</NavLink>
           <NavLink to='/ajuda'>AJUDA</NavLink>
 
@@ -131,7 +129,7 @@ const Nav = styled.nav<NavProps>`
   flex: 1;
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding-left: 50px;
   transition: all 0.3s ease;
@@ -196,8 +194,7 @@ const ButtonContainer = styled.div<ButtonContainerProps>`
   display: flex;  
   flex-direction: row;  
   justify-content: center;  
-  align-items: center;  
-  margin-top: 20px;
+  align-items: center;
   gap: 15px;  
 
   @media (max-width: 768px) {
